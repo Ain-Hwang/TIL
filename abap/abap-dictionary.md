@@ -1,32 +1,36 @@
 # ABAP Dictionary
 
-### ABAP Dictionary의 기능
+## ABAP Dictionary의 기능 \(t-code: se11\)
 
-abap dic에 있는 것은 모두 type 즉,  틀\(data type\), 그릇\(dataobject\)이다.  \(t-code: se11\)
-
-* Type Definitions : Global type에 대한 정의를 한다.   
-  * Structure : 스트럭쳐 타입
-  * Data Element : 필드 타입
-  * Table type: internal table 타입
-  * \*Structure의 component\(field\) 하나가 structure구조를 가질 수 있고, table 구조를 가질 수도 있다.
-* Data Object   
+* Type Definitions \(type objects\) : Global data type에 대한 정의를 한다. 틀\(data type\) 
+  * data type은 그릇\(data object\)을 만드는 틀이다.
+  * Structure : type을 갖는 component들로 구성되어 있다.
+  * Data Element : element type과 reference type이 존 , 필드와 같은 모습으로 기술적인 정보를 
+  * Table type: internal table의 기능적 속성을 저으이하는 데  사용된다. 특별한 형태인 range table type이 존재. \*Structure의 component\(field\) 하나가 structure구조를 가질 수 있고, table 구조를 가질 수도 있다.
+* Data Object  : 그릇\(data object\)이다 , 대표적으로  Table and View가 있다.  ...TYPE dbtab  / ...TYPE dbtab-comp
+  * Data object는 data type을 이용해서 만드는 데이타를 담을 수 있는 그릇이다.
   * ABAP Dic에서 테이블 타입의 data object를 정의를 하면 물리적인 DB가 생성된다 .
   * \*dic에서 table이나 view에 대한 정의를 하면 물리적인 db에 반영이된다. 추가적인 index도 반영이 가능
-* Service
-  * Input help: F4 Help를 제공, input field에 넣을 수 있는 파서블 벨류를 알려주는 기능
+* Service \(ABAP Tools\)
+  * Input help: F4 Help를 제공, input field에 넣을 수 있는 possible value\(or possible entry라고도 함\)를 알려주는 기능
   * Field help: F1 Help를 제공, field에 대한 기술적 속성을 알려줌 
   * Input Check: Input 동작 시 폴인키에 대해서도 반영 돼 input check가 들어가다.
   * Set and release locks: lock을 set, release하려면 dic에  lock object를 생성해야함.
+* Type Groups
 
 개발 시 ABAP Tool에서 Runtime 시 ABAP / Screen Interpreter에서 또 DatabaseInterFace에서도 ABAP DIC 참조 한다.
 
 
 
-### &lt;ABAP dic의 Types&gt;
+## Type Objects
 
-### 1.Data Elemants 
+ABAP Dictionary의  type은 모든 프로그램에서 data type으로 선언해 사용 가능
 
-field type의 data type으로 의미적인 속성을 갖는다. element를 만들 때 elemant의 기술적인 속성을 갖는 domain이 꼭 필요한다. \(element : domain = n : 1의 관계\)
+### Data Type
+
+#### 1.Data Elemants 
+
+field type의 data type으로 의미적인 속성을 갖는다. element를 만들 때 element의 기술적인 속성을 갖는 domain이 꼭 필요한다. \(element : domain = n : 1의 관계\)
 
 #### 특
 
@@ -36,7 +40,7 @@ field type의 data type으로 의미적인 속성을 갖는다. element를 만�
 
 
 
-### 2. Structures
+#### 2. Structures
 
 \(flat / deep str라고도 함\) Structure는 여러개의 component\(data element\(field\), View, DB table, Table type\(itab\)\)로 구성된다. 이때 모든 component가 field인 것을 **Simple structure** 라고 하고, 하나의 컴포넌트가 Table or Structure인 것은 **Nested structure**라고 한다.
 
@@ -98,7 +102,7 @@ INSERT wa_pers INTO TABLE wa_per-telephone.
 
 
 
-### 3. Table Type
+#### 3. Table Type
 
 \(table type = internal table type\)
 
@@ -114,6 +118,10 @@ Line type의 str에도 여러 component\(data element\(field\), View, DB table, 
 * secondary key\(optional\): 보조키는 hashed나 sorted tab에서 사용됨. \(Unique/Non-unique 선택가능\)
 
 
+
+### Data Objects
+
+Data object는 data type을 이용해서 만드는 데이타를 담을 수 있는 그릇이다. table이나 view를 말한다. 
 
 Abap Dic에서 type들을 grounp 지어 놓은 것도 있음 =&gt; 대표적인 type grounp : ICON
 
