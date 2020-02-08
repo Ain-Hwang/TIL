@@ -237,8 +237,24 @@ table bbuffer의 기본적인 흐름
 #### Buffering Type 3가지
 
 * Full buffering: 검색 조건과 상관없이 해당되는 table 전체를 가져옴
-* Generic Buffering: primary key와 상관 없이 generic key와 관련된 내용만 올라옴
-* Single-record buffering: 한개의 레코드만 올라
+  * select \* from scounter where~~ //where과 관계없이 scounter 전체를 가져옴
+* Generic Buffering: primary key와 상관 없이 generic key와 관련된 내용만 올라옴, primary key를 1개는 설정에 따라 사용가능\(따로 설정 가능\)
+  * select \* from scounter where carrid = 'LH' and countnum = '00000004' // countnum은 generic key가 아니라서 generic key에 해당하는 carrid에 포함하는 값만 가져옴
+* Single-record buffering: primary key 전체에 해당하는 한개의 레코드만 올라옴
+  * select single \* from scounter where carrid = 'LH' and countnum = '00000004' // 모든 조건에 해당하는 딱 하나의 레코드만 가져옴
+
+#### Buffer Synchronization
+
+두개 이상의 application server에서 하나의 DBtab을 사용하는 경우 
+
+server1이 자기자신 table buffer에 원본 데이타를 쌓아두고 사용 중인데 server2에서 원본 table에 데이타를 변경하면 server1 buffer에 담긴 값은 어떻게 하는가 
+
+buffer synchronization를 사용하면 된다. 사용하는 법
+
+1. server1,2가 각각 자신의 buffer에 같은 table에 데이타를 쌓아두고 사용중이다.
+2. 만일 server1이 물리적 DBtab과 자기 자신 buffer에 있는 a1이라는 데이터를 삭제 했을 때 synchronization table\(동기화  테이블\)에도 변경 된 내용의 데아타를 쌓는다.
+3. server2의 bufferdp a1컨텐츠가 아직 존재한다. 변경 된 내용이 있는지 synchronization table을 확인한다. 확인 후  a1 데이타가 유효하지 않다는 걸 알게 되면 자기 자긴 buffer에서 a1 데이타를 삭제한다.
+4. 그리고 server2느    dddd dddd
 
 
 
