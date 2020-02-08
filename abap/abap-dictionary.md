@@ -251,10 +251,10 @@ server1이 자기자신 table buffer에 원본 데이타를 쌓아두고 사용 
 
 buffer synchronization를 사용하면 된다. 사용하는 법
 
-1. server1,2가 각각 자신의 buffer에 같은 table에 데이타를 쌓아두고 사용중이다.
+1. server1,2가 각각 자신의 buffer에 같은 table a의 데이타를 쌓아두고 사용중이다.
 2. 만일 server1이 물리적 DBtab과 자기 자신 buffer에 있는 a1이라는 데이터를 삭제 했을 때 synchronization table\(동기화  테이블\)에도 변경 된 내용의 데아타를 쌓는다.
 3. server2의 bufferdp a1컨텐츠가 아직 존재한다. 변경 된 내용이 있는지 synchronization table을 확인한다. 확인 후  a1 데이타가 유효하지 않다는 걸 알게 되면 자기 자긴 buffer에서 a1 데이타를 삭제한다.
-4. 그리고 server2느    dddd dddd
+4. 그리고 server2는 다시 DB에서 table a를 가져와 자기자신 버퍼에 새로 쌓는다.
 
 
 
