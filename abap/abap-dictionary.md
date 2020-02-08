@@ -123,6 +123,12 @@ Line type의 str에도 여러 component\(data element\(field\), View, DB table, 
 
 Data object는 data type을 이용해서 만드는 데이타를 담을 수 있는 그릇이다. table이나 view를 말한다. 
 
+1. Table 
+
+ABAP Table은 크게 3가지 좋류가 존재한다. Transparent table, pooled Table, Cluster Table이다.  pool, cluster는 여러개의 table을 하나로 그룹 지어 놓은 ABAP dictionary object다. 
+
+* transparent table
+* 
 Abap Dic에서 type들을 grounp 지어 놓은 것도 있음 =&gt; 대표적인 type grounp : ICON
 
  
