@@ -45,7 +45,7 @@ field type의 data type으로 의미적인 속성을 갖는다. element를 만�
 
 \(flat / deep str라고도 함\) Structure는 여러개의 component\(data element\(field\), View, DB table, Table type\(itab\)\)로 구성된다. 이때 모든 component가 field인 것을 **Simple structure** 라고 하고, 하나의 컴포넌트가 Table or Structure인 것은 **Nested structure**라고 한다.
 
-#### -Simple Structure \(simple structure\)
+#### -Simple Structure \(flat structure\)
 
 field 단위의 component만 갖는 structure
 
@@ -63,7 +63,7 @@ ABAP DIC에 있는  'address'는 'street' , 'zipcode', 'city'등의 field compon
 
 하나의 component가 tab or str인 structure
 
-&lt;Component가 Structure 경우&gt;
+&lt;Component가 Structure 경우&gt; = nested str
 
 ```text
 DATA wa_pers TYPR person.
@@ -87,7 +87,7 @@ wa_pers-name-firstname = 'Hans'. "가 아닌
 wa_pers-firstname = 'Hans'. "로 쓸 수 있다.
 ```
 
-&lt;Component가 Table인 경우&gt; 
+&lt;Component가 Table인 경우&gt; deep str
 
 ```text
 DATA wa_pers TYPE person.
@@ -114,7 +114,7 @@ Line type의 str에도 여러 component\(data element\(field\), View, DB table, 
 #### Table type 정의
 
 * Line type: internal tab의  Line에 Structure나 data type의 속성을 정의
-* Access mode: 데이타의 관리와 Access mode을 알아 낸다\(결정한다\). \(사용 가능한 access mode: standard table, hashed table, sorted table, indextable가 있고 not specified 지정하지 않을 수 있다.\)
+* Access mode: 데이타의 관리와 Access mode을 알아 낸다\(결정한다\). \(사용 가능한 access mode: standard table, hashed table, sorted table, index table가 있고 not specified 지정하지 않을 수 있다.\)
 * primary key: 기본 키 정의 및 키의 \(Unique/Non-unique/Not specified\) 같은 vlaue를 정의 \(hashed tab은 항상 unique sorted tab은 세개 다 가능\)
 * secondary key\(optional\): 보조키는 hashed나 sorted tab에서 사용됨. \(Unique/Non-unique 선택가능\)
 
@@ -152,7 +152,7 @@ abap table의 종류는 크게 3가지가 있다.
 
 테이블의 속성을 표현하는 개별 구성 요소로 사워 정보라느 테이블이 존재 한다면, 사원번호 /  출신지역 / 전화번호 등과 같은 사원 정보의 속성들을 정의해서 사용할 수 있다. 이런 각각의 속성들을 테이블 필드라 한다. \(abap dictionary에서는 data object를 생성, 변경, 조회, 삭제할 수 있다.\)
 
-* field 속성 정의 \(data type, feld length, short text\) 
+* field 속성 정의 \(data type, field length, short text\) 
 
   field 속성은 data element와 predefined type 두가지 방식을 이요해 지정
 
@@ -164,7 +164,7 @@ abap table의 종류는 크게 3가지가 있다.
 
 \#Transparent table은 실제 물리적인 database table에 값을 저장하는 정의 부분이다.  이 테이블의 field가  의미적인 정보\(short description\)를 담는 data element를 사용하고 data element는 반드시 기술적 정보\(field type, length\)를 담는 domain을 사용한다. \*서로 다른 data element가 같은 domain을 사용할 수 있다.\*
 
-\#transparent table은 data를 담을 수 있고, key field를 갖는다. inital value도 갖는다. 클라이언트 정보를 의미하는 MANDT field도 갖는다. 하지만 메모리 영역을 공유하지 않기 때문에 Ref 속성을 갖지 않는다. active하면 DB에 물리적  테이블이 생긴다. \(즉, 저장속사 생긴다.\)  하지만 프로그램에서는 str로 쓰인다
+\#transparent table은 data를 담을 수 있고, key field를 갖는다. initial value도 갖는다. 클라이언트 정보를 의미하는 MANDT field도 갖는다. 하지만 메모리 영역을 공유하지 않기 때문에 Ref 속성을 갖지 않는다. active하면 DB에 물리적  테이블이 생긴다. \(즉, 저장소 생긴다.\)  하지만 프로그램에서는 str로 쓰인다
 
 \#transparent tab 생성 & 저장 시하는 세팅\(technical setting\): size category\(record size\), data class\(저장공간 구분\)를 지정, Table buffer\(table buffer를 사용할 것 인가?\),  Logging \(데이타 변경에 대해 log를 남길 것인가\)
 
@@ -173,7 +173,29 @@ abap table의 종류는 크게 3가지가 있다.
   * Organizational Data: 인스톨, 커스터마이징할 때 설정 \(국가키 같은 것\)
   * Transaction Data: 자주 변경하는 데이타
   * System Data:SAP system 자체에서 필요한 데이
-* 
+* size category: 각 테이블에 필요한 저장공간의 예상치
+  * initial extent: 모든 카테고리에서 동일한 값
+  * first extent & second extent : size category의 값 만큼 미리 저장 공간 확보
+  * 위의 것들은 한 tab마다 갖고 있는 것이다.
+* Log data changes: 테이블이 변경 됐을 때 그 것을 기록할지 설정하는 것
+  * 1. abap dic에서 logging activated \(로그 활성화\)
+    2. 베이시스에서 "rec/client=all' 같은 파라미터를 설정
+    3. 1,2번의 조건이 맞으면 실제 db의 물리적인 값이 변경됐는지 묻는다. DB에
+    4. 데이타변경이 됐다면 그에 대한 로그를 쌓는다.
+  * 2번의 파라미터 종류
+    * rec/client = all : 모든 클라이언트의 로그를 쌓아라
+    * rec/client = 000\[...\] : 지정된 클라이언트의 로그만 쌓아라
+    * rec/client = off: 로그를 쌓지 않는다.
+
+
+
+#### cluster tables and pool table
+
+abap dic상에는 여러개의 tab이지만 db상에서는 tab이 한개인 것 \(treasparent는 dic과 db의 tab이 매칭됨\)
+
+* cluster table
+  * 두개의 table이 중복되느 ketyfsmdddddd
+
 
 
 
