@@ -134,14 +134,13 @@ ABAP Table은 크게 3가지 좋류가 존재한다. Transparent table, pooled T
 
 abap table의 종류는 크게 3가지가 있다.
 
-* transparent table
-* * Transparent Table
+* Transparent Table
 * Pooled Table
 * Cluster Table
 
-#### **=** Transparent Table
+#### Transparent Table
 
-\#table 구성하는 요소: \(transparent tab 뿐 아니\)
+\#table 구성하는 요소: \(transparent tab 뿐 아니라 모든 tab\)
 
 * Table Field
   * key fields: 라인을 구분 지을 수 있는 최소의 field단위
