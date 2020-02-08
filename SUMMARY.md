@@ -9,7 +9,7 @@
   * [목표](web-1/undefined.md)
 * [ABAP](abap/README.md)
   * [ABAP Dictionary](abap/abap-dictionary.md)
-  * [Untitled](abap/untitled.md)
+  * [Input Checks](abap/untitled.md)
   * [Database Tables](abap/database-tables.md)
   * [목표](abap/undefined.md)
 
