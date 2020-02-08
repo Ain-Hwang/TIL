@@ -17,6 +17,7 @@
   * Input Check: Input 동작 시 폴인키에 대해서도 반영 돼 input check가 들어가다.
   * Set and release locks: lock을 set, release하려면 dic에  lock object를 생성해야함.
 * Type Groups
+  * Abap Dic에서 type들을 grounp 지어 놓은 것도 있음 =&gt; 대표적인 type grounp : ICON
 
 개발 시 ABAP Tool에서 Runtime 시 ABAP / Screen Interpreter에서 또 DatabaseInterFace에서도 ABAP DIC 참조 한다.
 
@@ -121,15 +122,74 @@ Line type의 str에도 여러 component\(data element\(field\), View, DB table, 
 
 ### Data Objects
 
-Data object는 data type을 이용해서 만드는 데이타를 담을 수 있는 그릇이다. table이나 view를 말한다. 
+Data object는 data type을 이용해서 만드는 데이타를 담을 수 있는 그릇이다. table이나 view를 말한다.
+
+**Table**
 
 1. Table 
 
+\*table의 이름은 system마다 고유하다.
+
 ABAP Table은 크게 3가지 좋류가 존재한다. Transparent table, pooled Table, Cluster Table이다.  pool, cluster는 여러개의 table을 하나로 그룹 지어 놓은 ABAP dictionary object다. 
 
+abap table의 종류는 크게 3가지가 있다.
+
 * transparent table
+* * Transparent Table
+* Pooled Table
+* Cluster Table
+
+#### **=** Transparent Table
+
+\#table 구성하는 요소: \(transparent tab 뿐 아니\)
+
+* Table Field
+  * key fields: 라인을 구분 지을 수 있는 최소의 field단위
+  * function fields: key field 이외의 다른 field
+  * field는 테이블의 속성을 표현
+* 한줄씩의 Line\(같은 말로 tuple, record, data\)이 있다.
+
+\#Table field 
+
+테이블의 속성을 표현하는 개별 구성 요소로 사워 정보라느 테이블이 존재 한다면, 사원번호 /  출신지역 / 전화번호 등과 같은 사원 정보의 속성들을 정의해서 사용할 수 있다. 이런 각각의 속성들을 테이블 필드라 한다. \(abap dictionary에서는 data object를 생성, 변경, 조회, 삭제할 수 있다.\)
+
+* field 속성 정의 \(data type, feld length, short text\) 
+
+  field 속성은 data element와 predefined type 두가지 방식을 이요해 지정
+
+  * data element: 사용자가 직접 생성할 수 있는 오브젝트이며 이미 존재하는 data element를 입력하면 데이터 타입, 길이와 내역이 자동으로 지정된다. \(data element를 생성했을 때 입력했기 때문\)
+  * predefined type을 사용하면 정보를 직접 입력할 수 있다. 
+
+* Reference Field와 Reference Table 
+  * 수량을 표현하는 데이터 타입 QUAN과 화폐량을 표현하는 데이터 타입 CURR는 단위를 정의하는 참조 필드를 지정하여야한다.  \(QUAN = UNIT / CURR = CUKY\) 단위 \(kg, g, ton\)에 따라 같은 100이라도 전혀 다른 데이터가 될 수 있기 때문에 반드시 단위 정보를 추가한다.
+
+\#Transparent table은 실제 물리적인 database table에 값을 저장하는 정의 부분이다.  이 테이블의 field가  의미적인 정보\(short description\)를 담는 data element를 사용하고 data element는 반드시 기술적 정보\(field type, length\)를 담는 domain을 사용한다. \*서로 다른 data element가 같은 domain을 사용할 수 있다.\*
+
+\#transparent table은 data를 담을 수 있고, key field를 갖는다. inital value도 갖는다. 클라이언트 정보를 의미하는 MANDT field도 갖는다. 하지만 메모리 영역을 공유하지 않기 때문에 Ref 속성을 갖지 않는다. active하면 DB에 물리적  테이블이 생긴다. \(즉, 저장속사 생긴다.\)  하지만 프로그램에서는 str로 쓰인다
+
+\#transparent tab 생성 & 저장 시하는 세팅\(technical setting\): size category\(record size\), data class\(저장공간 구분\)를 지정, Table buffer\(table buffer를 사용할 것 인가?\),  Logging \(데이타 변경에 대해 log를 남길 것인가\)
+
+* data class: 테이블마다의 용도 별로 DB 저장소에서 물리적인 저장 공간 구분지어 관리하는 것  dic에서 구분지어 주면 물리적 DB에서도 똑같이 저장공간을 구분지어 사용
+  * Master data: 자주 변하지 않는 데이타
+  * Organizational Data: 인스톨, 커스터마이징할 때 설정 \(국가키 같은 것\)
+  * Transaction Data: 자주 변경하는 데이타
+  * System Data:SAP system 자체에서 필요한 데이
 * 
-Abap Dic에서 type들을 grounp 지어 놓은 것도 있음 =&gt; 대표적인 type grounp : ICON
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
 
  
 
