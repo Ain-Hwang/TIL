@@ -124,7 +124,7 @@ Line type의 str에도 여러 component\(data element\(field\), View, DB table, 
 
 Data object는 data type을 이용해서 만드는 데이타를 담을 수 있는 그릇이다. table이나 view를 말한다.
 
-**Table**
+**Table\(Database table\)**
 
 1. Table 
 
@@ -191,10 +191,66 @@ abap table의 종류는 크게 3가지가 있다.
 
 #### cluster tables and pool table
 
-abap dic상에는 여러개의 tab이지만 db상에서는 tab이 한개인 것 \(treasparent는 dic과 db의 tab이 매칭됨\)
+abap dic상에는 여러개의 tab이지만 db상에서는 tab이 한개인 것 \(transparent는 dic과 db의 tab이 매칭됨\)
 
 * cluster table
-  * 두개의 table이 중복되느 ketyfsmdddddd
+  * 두개 이상 table이 중복되는 key field a,b를 갖을 때! 공통된 key 갖는 여러 테이블을 db에서 하나의 tab으로 관리하는 것
+* pooled table
+  * 서로 연관되지 않는 tab을 물리적 DB에서 하나로 관리하게 해주는 것 
+* 이 두 table의 장점 
+  * table과 data field가 물리적으로 작아진다.\(Fewer tables and data fields\)
+  * 압축효과를 갖는다.\(Data compression\)
+  * data 보관할 때 암호화 가능\(Encrypted data storage\)
+* 단점 \(단점이 더 많음\)
+  * abap join, view사용, secondary index, GROUP BY, ORDER BY 불가능
+  * append 불가능
+  * key로 selection에 제한이 있음
+  * 필요 이상의 긴 key
+
+## Database Table의 index
+
+index는 data를 검색할 때 사용된다.
+
+&lt;index의 종류&gt;
+
+* Primary index: key field를 담는 index로 자동으로 생성 됨 = 'table\_name0'으로 표기 ex\) scarr~0
+* Secondary index: primary index 이외에 추가적인 index를 만들고자 할 때 secondary index로 만든다. 표기는 = 'table\_nameindex\_name' ex\) scarr~nam
+* Extension index: SAP system을 수정할 때 
+* se11에서 이미 만들어지 tab에서 secondaryindex와 extansionindex만들기 가능
+
+&lt;Optimizer&gt;
+
+DB Optimizer: 한 table에 대해서 여러 index가 존재할 경우 적정한 index를 찾아줌.
+
+## Table buffering
+
+table bbuffer의 기본적인 흐름
+
+1. WHERE조건에 따른 검색 \(application 영역\)
+2. 검색을 하면 검색 내역을 SAP table buffer에서 가져 올 수 있는지 buffer를 검사한다.
+3. 있으면 검색을 완료하고 없으면 DB\(database 영역\)로 간다. 
+4. Database Processes가 Database buffer를 검색한다. 
+5. 있으면 buffer에서 가져가고 없으면 DB에서 검색한다.
+6. DBI로 값을 가져간다.
+7. DB interface는 가져온 값을 SAP table buffer에 쌓는다 \(중요한 역할\)
+
+#### Buffering Type 3가지
+
+* Full buffering: 검색 조건과 상관없이 해당되는 table 전체를 가져옴
+* Generic Buffering: primary key와 상관 없이 generic key와 관련된 내용만 올라옴
+* Single-record buffering: 한개의 레코드만 올라
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
