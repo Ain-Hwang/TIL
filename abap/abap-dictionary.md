@@ -216,7 +216,7 @@ view 여러개의 tab을 하나의 tab처럼 보여주는 append object  즉 여
 
 #### view cluster\(se-54\)
 
-여러 개의 maintenance view를 서로 연결해서 사용하는 것으로 일관성 있게 유지보수가 가능하고,  
+여러 개의 maintenance view를 서로 연결해서 사용하는 것으로 일관성 있게 유지보수가 가능하고, 
 
 ####  inner join 과  outer join 차이
 
