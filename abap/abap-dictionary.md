@@ -193,7 +193,30 @@ abap table의 종류는 크게 3가지가 있다.
 
 #### View
 
-view 여러개의 tab을 하나의 tab처럼 보여주는 append object
+view 여러개의 tab을 하나의 tab처럼 보여주는 append object  즉 여러 tab을 조합 = join하고 사용하지 않는 데이타를 숨기고, 데이터를 조회하고 통합한다. abap dic에서 view를 활성화하면 db에 생성되고 Database view를 접근하려면 dbinterface를 통해 access한다.  Database view의 구조가 변경되면 이 변경 사항은 바로  database view에 영향을 주지 않는다. view는 데이터를 가진 것이 아니므로 기존의 view를 삭제하고 abap dic에 정의된 새로운 view를 생성시켜야 한다. 
+
+#### view의 종류
+
+* Database View:
+  * 여러 개의 테이블에서 필요한 데이터들을 추출한 view를 의미한다. 
+  * 활성화 되면abap dic에서 사용가능
+  * 만약 하나의 테이블만 사용하여 view를 정의 하면  'MAINTENANCE STATUS' 를 이용해 읽기/쓰기를 정할 수도 있다.
+  * Database view는 transparent table에서만 사용할 수 있다.
+  * 정렬해서 보고 싶은 tab의 field만 보기도 가능 
+  * inner join이다.
+* Projection View: 
+* Help View:
+* Maintenance VIew :
+  * 여러 개의 테이블을 동시에 유지보수\(변경, 조회, 생성\) 할 수 있는 view를 의미한다. 
+  * 이 때 테이블들은 반드시 foreign key로 연결 돼 있어야함. 
+  * foreign key로 연결된 테이블들의 원하는 필드를 하나로 모아 maintenance view로 생성하고 view에서 데이터를 입력 삭제 변경하면 실제 테이블의 데이터도 수정.
+  * 생성 시 primary table의 view field의 옵션을 정할 수 있다. R\(read only\), H\(hidden\), S\(subset\)
+
+####  inner join 과  outer join 차이
+
+inner join: join condition에 맞는 데이타만 가져 옴
+
+outer join: 한쪽을 기준으로 왼쪽의 값을 다 가져 오고 그에 합당하는 값만 오른쪽에서 가져온다.
 
 
 
