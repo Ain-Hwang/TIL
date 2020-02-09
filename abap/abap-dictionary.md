@@ -140,7 +140,7 @@ abap table의 종류는 크게 3가지가 있다.
 
 #### Include Structure 
 
-여러 str이나 tab에 동일한 구조의 field르루 추가할 때 사용하는 것 // tab이나 str의 field부분에 '.include'를 하고 사용하고자 하는 str를 사용한다. 만약 include하고 싶은 field가 nested str라도 flat type str로 사용할 수 있다.
+여러 str이나 tab에 동일한 구조의 field 추가할 때 사용하는 것 // tab이나 str의 field부분에 '.include'를 하고 사용하고자 하는 str를 사용한다. 만약 include하고 싶은 field가 nested str라도 flat type str로 사용할 수 있다.
 
 #### Transparent Table
 
@@ -154,11 +154,11 @@ abap table의 종류는 크게 3가지가 있다.
 
 \#Table field 
 
-테이블의 속성을 표현하는 개별 구성 요소로 사워 정보라느 테이블이 존재 한다면, 사원번호 /  출신지역 / 전화번호 등과 같은 사원 정보의 속성들을 정의해서 사용할 수 있다. 이런 각각의 속성들을 테이블 필드라 한다. \(abap dictionary에서는 data object를 생성, 변경, 조회, 삭제할 수 있다.\)
+테이블의 속성을 표현하는 개별 구성 요소로 사원 정보라는 테이블이 존재 한다면, 사원번호 /  출신지역 / 전화번호 등과 같은 사원 정보의 속성들을 정의해서 사용할 수 있다. 이런 각각의 속성들을 테이블 필드라 한다. \(abap dictionary에서는 data object를 생성, 변경, 조회, 삭제할 수 있다.\)
 
 * field 속성 정의 \(data type, field length, short text\) 
 
-  field 속성은 data element와 predefined type 두가지 방식을 이요해 지정
+  field 속성은 data element와 predefined type 두가지 방식을 용해 지정
 
   * data element: 사용자가 직접 생성할 수 있는 오브젝트이며 이미 존재하는 data element를 입력하면 데이터 타입, 길이와 내역이 자동으로 지정된다. \(data element를 생성했을 때 입력했기 때문\)
   * predefined type을 사용하면 정보를 직접 입력할 수 있다. 
@@ -186,7 +186,7 @@ abap table의 종류는 크게 3가지가 있다.
     2. 베이시스에서 "rec/client=all' 같은 파라미터를 설정
     3. 1,2번의 조건이 맞으면 실제 db의 물리적인 값이 변경됐는지 묻는다. DB에
     4. 데이타변경이 됐다면 그에 대한 로그를 쌓는다.
-  * 2번의 파라미터 종류
+  * 파라미터 종류
     * rec/client = all : 모든 클라이언트의 로그를 쌓아라
     * rec/client = 000\[...\] : 지정된 클라이언트의 로그만 쌓아라
     * rec/client = off: 로그를 쌓지 않는다.
@@ -222,21 +222,21 @@ index는 data를 검색할 때 사용된다.
 * Extension index: SAP system을 수정할 때 
 * se11에서 이미 만들어지 tab에서 secondaryindex와 extansionindex만들기 가능
 
-&lt;Optimizer&gt;
+**&lt;Optimizer&gt;**
 
 DB Optimizer: 한 table에 대해서 여러 index가 존재할 경우 적정한 index를 찾아줌.
 
 ## Table buffering
 
-table bbuffer의 기본적인 흐름
+table buffer의 기본적인 흐름
 
 1. WHERE조건에 따른 검색 \(application 영역\)
-2. 검색을 하면 검색 내역을 SAP table buffer에서 가져 올 수 있는지 buffer를 검사한다.
+2. 검색을 하면 검색 내역을 SAP table buffer에서 가져 올 수 있는지 buffer를 검사한다.  \(application 영역\)
 3. 있으면 검색을 완료하고 없으면 DB\(database 영역\)로 간다. 
 4. Database Processes가 Database buffer를 검색한다. 
 5. 있으면 buffer에서 가져가고 없으면 DB에서 검색한다.
 6. DBI로 값을 가져간다.
-7. DB interface는 가져온 값을 SAP table buffer에 쌓는다 \(중요한 역할\)
+7. DB interface는 가져온 값을 SAP table buffer에 쌓는다. \(중요한 역할\)
 
 #### Buffering Type 3가지
 
