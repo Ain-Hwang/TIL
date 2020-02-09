@@ -191,7 +191,9 @@ abap table의 종류는 크게 3가지가 있다.
     * rec/client = 000\[...\] : 지정된 클라이언트의 로그만 쌓아라
     * rec/client = off: 로그를 쌓지 않는다.
 
-#### vie
+#### View
+
+view 여러개의 tab을 하나의 tab처럼 보여주는 append object
 
 
 
