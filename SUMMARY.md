@@ -10,6 +10,6 @@
 * [ABAP](abap/README.md)
   * [ABAP Dictionary](abap/abap-dictionary.md)
   * [Input Checks](abap/untitled.md)
-  * [Database Tables](abap/database-tables.md)
+  * [Table Change](abap/database-tables.md)
   * [목표](abap/undefined.md)
 
