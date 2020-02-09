@@ -211,6 +211,12 @@ view 여러개의 tab을 하나의 tab처럼 보여주는 append object  즉 여
   * 이 때 테이블들은 반드시 foreign key로 연결 돼 있어야함. 
   * foreign key로 연결된 테이블들의 원하는 필드를 하나로 모아 maintenance view로 생성하고 view에서 데이터를 입력 삭제 변경하면 실제 테이블의 데이터도 수정.
   * 생성 시 primary table의 view field의 옵션을 정할 수 있다. R\(read only\), H\(hidden\), S\(subset\)
+  * outer join이다.
+  * maintenance dialogs가 가능해서 생성, 수정, 저장, 삭제 가능 / 짧은 시간에 생성가능 / 단점은 비도이적 업뎃 불가 장점이 더 큼
+
+#### view cluster\(se-54\)
+
+여러 개의 maintenance view를 서로 연결해서 사용하는 것으로 일관성 있게 유지보수가 가능하고,  
 
 ####  inner join 과  outer join 차이
 
