@@ -20,7 +20,7 @@ check tab에 여러 개의 key field가 있으 때 그 중 체크할 필요가 �
 
 #### Value Table
 
-해당 domain을 사용하는 모든 data element를 사용하는 tab들은 value tab으로 지정된 tab 값만 쓸 수 있음. 
+해당 domain을 사용하는 모든 data element를 사용하는 tab들은 value tab으로 지정된 tab 값만 쓸 수 있음. check tab의 filed가 value tab의 domain을 사용하는 경우 check tab은 value tab 안에 포함돼 있는 것.
 
 #### Fixed value
 
