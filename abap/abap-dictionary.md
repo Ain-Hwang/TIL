@@ -193,31 +193,28 @@ abap table의 종류는 크게 3가지가 있다.
 
 #### View
 
-view 여러개의 tab을 하나의 tab처럼 보여주는 append object  즉 여러 tab을 조합 = join을 사용, 필요 없는 데이타를 숨기고, 데이터를 조회하고 통합한다. abap dic에서 view를 활성화하면 db에 생성되고 Database view를 접근하려면 Data base interface를 통해 access한다.  Database view의 구조가 변경되면 이 변경 사항은 바로  database view에 영향을 주지 않는다. view는 데이터를 가진 것이 아니므로 기존의 view를 삭제하고 abap dic에 정의된 새로운 view를 생성시켜야 한다. 
+view 여러개의 tab을 하나의 tab처럼 보여주는 append object  즉 여러 tab을 조합 = join하고 사용하지 않는 데이타를 숨기고, 데이터를 조회하고 통합한다. abap dic에서 view를 활성화하면 db에 생성되고 Database view를 접근하려면 dbinterface를 통해 access한다.  Database view의 구조가 변경되면 이 변경 사항은 바로  database view에 영향을 주지 않는다. view는 데이터를 가진 것이 아니므로 기존의 view를 삭제하고 abap dic에 정의된 새로운 view를 생성시켜야 한다. 
 
 #### view의 종류
 
 * Database View:
   * 여러 개의 테이블에서 필요한 데이터들을 추출한 view를 의미한다. 
-  * dbi를 이용해 여러 테이블로 구성된 view 데이터에 접근하는 것을 보여준다. abap dic에서 정의 하고 dbi를 통해서 abap porogram에서 사용할 수 있게 
   * 활성화 되면abap dic에서 사용가능
   * 만약 하나의 테이블만 사용하여 view를 정의 하면  'MAINTENANCE STATUS' 를 이용해 읽기/쓰기를 정할 수도 있다.
   * Database view는 transparent table에서만 사용할 수 있다.
-  * 정렬해서 보고 싶은 tab들의 field만 보기도 가능 = 다중 join
-  * selection condition 사용 가능
-  * inner join이다. / join condition주기 가능
-* Projection View: inner join  / selection condition을 줄 수 없음 / 관심 없는 field를 숨기기는 가능 
-* Help View: outer join 
+  * 정렬해서 보고 싶은 tab의 field만 보기도 가능 
+  * inner join이다.
+* Projection View: 
+* Help View:
 * Maintenance VIew :
   * 여러 개의 테이블을 동시에 유지보수\(변경, 조회, 생성\) 할 수 있는 view를 의미한다. 
   * 이 때 테이블들은 반드시 foreign key로 연결 돼 있어야함. 
   * foreign key로 연결된 테이블들의 원하는 필드를 하나로 모아 maintenance view로 생성하고 view에서 데이터를 입력 삭제 변경하면 실제 테이블의 데이터도 수정.
-  * from구문 사용 불
   * 생성 시 primary table의 view field의 옵션을 정할 수 있다. R\(read only\), H\(hidden\), S\(subset\)
   * outer join이다.
-  * maintenance dialog가 가능해서 생성, 수정, 저장, 삭제 가능 / 짧은 시간에 생성가능 / 단점은 비동적 업뎃 불가 장점이 더 큼
+  * maintenance dialogs가 가능해서 생성, 수정, 저장, 삭제 가능 / 짧은 시간에 생성가능 / 단점은 비도이적 업뎃 불가 장점이 더 큼
 
-#### view cluster\(se-54: 만들기 / se34: 확인하기\)
+#### view cluster\(se-54\)
 
 여러 개의 maintenance view를 서로 연결해서 사용하는 것으로 일관성 있게 유지보수가 가능하고, 
 
