@@ -50,7 +50,7 @@ search help의 interface는 input help에 사용될 수 있는 context data\(imp
 
 ### search help의 활용
 
-search help느 3가지 방법으로 field에 추가 될 수 있다. 
+search help는 3가지 방법으로 field에 추가 될 수 있다. 
 
 * Data element에 search help추가
   * data element의 속성을 상속받는 모든 스크린 필드에 search help 가 자동으로 연결된다.table field에 search help 추가
@@ -70,7 +70,7 @@ search help느 3가지 방법으로 field에 추가 될 수 있다.
 
 #### selection method를 활용한 search help의 view\(=help view\)
 
-primary table에 해당하는 값을 secondary table에서 모두 가져온다. =outer join의 모습
+primary table에 해당하는 값을 secondary table에서 모두 가져와 보여 주는 것이 help view =outer join 모습
 
 #### search help의 3가지 유형
 
@@ -85,6 +85,8 @@ append structure와 비슷하다. sap collective search help에 append search he
 #### search help exits
 
 search help할 때 여러 옵션을 줄 수 있다.
+
+
 
 
 
