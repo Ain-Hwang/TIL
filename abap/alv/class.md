@@ -122,7 +122,82 @@ abap에는 reference를 포함할 수 있는 두 가지 타입의 변수가 존�
 DATA cref TYPE REF TO class "Object Reference Variable 구
 ```
 
-객체 참조 변수는 이미 존재하는 객체를 참고하거나 초기화할 수 있다. 객체를 가리키는 참조 변수가 객체의 실체를 알고 있으며 클래스의 인스턴스는 객체를 가리키는 참조 변수를 사용해 주소를 지정할 수 있다. 
+\(객체 참조 변수 생성하는 모습 / cref = 객체 참조 변 \)객체 참조 변수는 이미 존재하는 객체를 참고하거나 초기화할 수 있다. 객체를 가리키는 참조 변수가 객체의 실체를 알고 있으며 클래스의 인스턴스는 객체를 가리키는 참조 변수를 사용해 주소를 지정할 수 있다. 
 
 객체 참조 변수를 이용하는 객체들은 객체의 구성요소에 직접 접근할 수가 없으며 reference\(객체의 주소\)를 이용해야 한다.
+
+abap standard type처럼 참조 변수를 위해  이미 정의된 데이타 타입이 존재 class reference와 interface reference 두가지 객체 참조 타입이 존재 모든 변수와 마찬가지로 객체 참조 변수를 clear 구문으로 초기화할 수 있다. 객체 참조 변수의 초깃값은 객체가 참고하 데이터 타입과 연결되지는 않는다.
+
+### 2. Object 생성
+
+객체 참조 변수를  생성하고 그 것을 이용해 클래스의 인스턴스인 객체를 생성하게 된다. 객체 참조 변수가 프로그램 선언부에서 이미 객체를참조하고 있다면, 인스턴스 생성 시 다시 type 구문을 사용할 필요가 업다. 
+
+```text
+CREATE OBJECT cref. "프로그램 선언부에 객체를 참조하고 있을 때 
+
+or
+
+DATA: l_ref TYPE REF TO OBJECT. 
+CREATE OBJECT l_ref TYPE  class. 
+```
+
+예외적으로 DATA: l\_ref TYPE REF TO OBJECT. 구문과 같이 최상위 클래스인 OBJECT를 참조하는 참조 변수 l\_ref를 생성하였다면 인스턴스 생성 시 CREATE OBJECT l\_ref TYPE  class. 와 같이 선언해야 한다. 
+
+### 3. Object Component 접근
+
+**객체의 속성과 메서드에 접근**하기 위해 ref-&gt;attr 또는 ref-&gt;meth 구문을 사용한다. ref-&gt;meth 구문은  CALL METHOD ref-&gt;meth의 축약형이다.
+
+**객체가 생성되기 이전에 클래스의 static 컴포넌트에 접근**할 수도 있다. static 속성에 접근하려면 class=&gt;attr 구문을 사용하고 static 메서드는 CALL METHOD class=&gt;meth 구문을 이용한다. 
+
+### 4. 클랫에서 하나 이상의 인스턴스 생성
+
+CREATE OBJECT 구문을 이용해 새로운 객체를 생성할 수 있다. 프로그램 내에서 같은 클래스로 부터 무한한 객체를 생성할 수 있으며, 객체들은 서로 완전히 독립적으로 행동하며 프로그램 내에서 각자의 이름과 속성을 갖는다.
+
+### 4.1 객체 참조 할당
+
+MOVE 구문을 이용해 다른 참조 변수에 reference를 할당할 수 있다. 같은 객체에 연결된 객체 참조 변수 내에 reference를 생성할 수 있다. MOVE 구문을 사용하거나 할당 기호 \(=\)를 사용할 때 시스템은 할당할 수 있는 타입인지를 자동으로 체크한다. 
+
+```text
+cref1 = cref2 MOVE
+or 
+cref2 TO cref1
+```
+
+dnl rnansdmf
+
+위 구문을 사용하려면 두 개의 클래스 \(cref1, cref2\)는 같은 타입이어야한다. 즉 같은 클래스를 참고해야한다는 의미이다. 
+
+### 4.2 CASTING
+
+casting 기호\(?\)를 이용해 서로 다른 클래스에서 파생된 객체를 참고해 또 다른 객체를 생성할 수 있다. 이때 다른 클래스는 부모 클래스와 부모 클래스를 상속 받은 자식 클래스등과 같이 다른 타입을 의미한다. 자식 클래스는 부모가 가진 속성과 메서드를 재정의하거나 추가할 수 있다. 부모에서 파생된 객체와 자식에서 파생된 객체 타입은 같지 않더라도 이때는 casting 기호 \(?\)를 이용해 구문 에러 없이 프로그램을 실행시킬 수 있다.
+
+## 4. Method 
+
+### 1. method선언
+
+instance method를 선언하려면 다음 구문을 사용
+
+```text
+METHODS meth IMPORTING [VALUE(] i1 i2 ...[)] TYPE type [OPTIONAL].
+             EXPORTING [VALUE(] e1 e2 ...[)] TYPE type.
+             CHANGING [VALUE(] c1 c2 ...[)] TYPE type [OPTIONAL].
+                RETURNING VALUE(r)
+                EXCEPTIONS exc1 exc2...
+```
+
+static method를 선언하려면 다음과 같이 선언한다.
+
+```text
+CLASS-METHODS meth...
+```
+
+method를 선언할 때 IMPORTING, EXPORTING, CHANGING, RETURNING을 이용해 파라미터 인터페이스를 정의할 수 있다. 인터페이스 파라미터의 속성을 정의하며, 파라미터의 참조 주소\(reference\)와 값\(value\)을 선택하여 사용할 수 있다. Function module이 EXPORT / IMPORT/CHANGING 매개 변수를 주고 받는 것과 같이, 클래스 메서드에서는 EXPORTING/IMPORTING/CHANGING 구문을 사용한다. 
+
+값을 매개변수로 넘겨 주려면 VALUE 구문을 선언해야 한다. RETURN VALUE는 항상 값으로 반환된다. 함수 모듈에서와 같이 예외처리 시에 EXCEPTIONS를 사용할 수 있다. 
+
+### 2. Method 구현 
+
+* 클래스에서 선언된 메서드를 implementation 파트에서 선언하고 기능을 구현해야한다. \(implementation 또는 implement라는 것은 메서드의 기능을 구현하는 것을 의미한다.\) 
+* 클래스의 메서드 선언 부분에 정의 된것 이외의 인터페이스 파라미터를 정의할 필요없다.
+* Function Module 과 같이  raise exception과 
 
