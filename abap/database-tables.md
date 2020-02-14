@@ -1,6 +1,0 @@
-# Database Tables
-
-### Transparent Tables
-
-
-

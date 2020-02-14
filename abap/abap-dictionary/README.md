@@ -21,15 +21,13 @@
 
 개발 시 ABAP Tool에서 Runtime 시 ABAP / Screen Interpreter에서 또 DatabaseInterFace에서도 ABAP DIC 참조 한다.
 
-
-
 ## Type Objects
 
 ABAP Dictionary의  type은 모든 프로그램에서 data type으로 선언해 사용 가능
 
 ### Data Type
 
-#### 1.Data Elemants 
+#### 1.Data Elements 
 
 field type의 data type으로 의미적인 속성을 갖는다. element를 만들 때 element의 기술적인 속성을 갖는 domain이 꼭 필요한다. \(element : domain = n : 1의 관계\)
 
@@ -107,7 +105,7 @@ INSERT wa_pers INTO TABLE wa_per-telephone.
 
 \(table type = internal table type\)
 
-Line type의 Structure가 internal tab 구조를 이루고 구조체에 데이터가 쌓이면 internal tab이 됨.                         \*물리적 db tab이 아니면 테이블을 만들 때 str형으로 만들기 가능
+Line type의 Structure가 internal tab 구조를 이루고 구조체에 데이터가 쌓이면 internal tab이 됨. \*물리적 db tab이 아니면 테이블을 만들 때 str형으로 만들기 가능
 
 Line type의 str에도 여러 component\(data element\(field\), View, DB table, Structure\)가 온다.
 
@@ -130,7 +128,7 @@ Data object는 data type을 이용해서 만드는 데이타를 담을 수 있�
 
 \*table의 이름은 system마다 고유하다.
 
-ABAP Table은 크게 3가지 좋류가 존재한다. Transparent table, pooled Table, Cluster Table이다.  pool, cluster는 여러개의 table을 하나로 그룹 지어 놓은 ABAP dictionary object다. 
+ABAP Table은 크게 3가지 류가 존재한다. Transparent table, pooled Table, Cluster Table이다.  pool, cluster는 여러개의 table을 하나로 그룹 지어 놓은 ABAP dictionary object다. 
 
 abap table의 종류는 크게 3가지가 있다.
 
@@ -193,28 +191,31 @@ abap table의 종류는 크게 3가지가 있다.
 
 #### View
 
-view 여러개의 tab을 하나의 tab처럼 보여주는 append object  즉 여러 tab을 조합 = join하고 사용하지 않는 데이타를 숨기고, 데이터를 조회하고 통합한다. abap dic에서 view를 활성화하면 db에 생성되고 Database view를 접근하려면 dbinterface를 통해 access한다.  Database view의 구조가 변경되면 이 변경 사항은 바로  database view에 영향을 주지 않는다. view는 데이터를 가진 것이 아니므로 기존의 view를 삭제하고 abap dic에 정의된 새로운 view를 생성시켜야 한다. 
+view 여러개의 tab을 하나의 tab처럼 보여주는 append object  즉 여러 tab을 조합 = join을 사용, 필요 없는 데이타를 숨기고, 데이터를 조회하고 통합한다. abap dic에서 view를 활성화하면 db에 생성되고 Database view를 접근하려면 Data base interface를 통해 access한다.  Database view의 구조가 변경되면 이 변경 사항은 바로  database view에 영향을 주지 않는다. view는 데이터를 가진 것이 아니므로 기존의 view를 삭제하고 abap dic에 정의된 새로운 view를 생성시켜야 한다. 
 
 #### view의 종류
 
 * Database View:
   * 여러 개의 테이블에서 필요한 데이터들을 추출한 view를 의미한다. 
+  * dbi를 이용해 여러 테이블로 구성된 view 데이터에 접근하는 것을 보여준다. abap dic에서 정의 하고 dbi를 통해서 abap program에서 사용할 수 있게 
   * 활성화 되면abap dic에서 사용가능
   * 만약 하나의 테이블만 사용하여 view를 정의 하면  'MAINTENANCE STATUS' 를 이용해 읽기/쓰기를 정할 수도 있다.
   * Database view는 transparent table에서만 사용할 수 있다.
-  * 정렬해서 보고 싶은 tab의 field만 보기도 가능 
-  * inner join이다.
-* Projection View: 
-* Help View:
+  * 정렬해서 보고 싶은 tab들의 field만 보기도 가능 = 다중 join
+  * selection condition 사용 가능
+  * inner join이다. / join condition주기 가능
+* Projection View: inner join  / selection condition을 줄 수 없음 / 관심 없는 field를 숨기기는 가능 
+* Help View: outer join 
 * Maintenance VIew :
   * 여러 개의 테이블을 동시에 유지보수\(변경, 조회, 생성\) 할 수 있는 view를 의미한다. 
   * 이 때 테이블들은 반드시 foreign key로 연결 돼 있어야함. 
   * foreign key로 연결된 테이블들의 원하는 필드를 하나로 모아 maintenance view로 생성하고 view에서 데이터를 입력 삭제 변경하면 실제 테이블의 데이터도 수정.
+  * from구문 사용 불
   * 생성 시 primary table의 view field의 옵션을 정할 수 있다. R\(read only\), H\(hidden\), S\(subset\)
   * outer join이다.
-  * maintenance dialogs가 가능해서 생성, 수정, 저장, 삭제 가능 / 짧은 시간에 생성가능 / 단점은 비도이적 업뎃 불가 장점이 더 큼
+  * maintenance dialog가 가능해서 생성, 수정, 저장, 삭제 가능 / 짧은 시간에 생성가능 / 단점은 비동적 업뎃 불가 장점이 더 큼
 
-#### view cluster\(se-54\)
+#### view cluster\(se-54: 만들기 / se34: 확인하기\)
 
 여러 개의 maintenance view를 서로 연결해서 사용하는 것으로 일관성 있게 유지보수가 가능하고, 
 
@@ -250,10 +251,10 @@ index는 data를 검색할 때 사용된다.
 
 &lt;index의 종류&gt;
 
-* Primary index: key field를 담는 index로 자동으로 생성 됨 = 'table\_name0'으로 표기 ex\) scarr~0
-* Secondary index: primary index 이외에 추가적인 index를 만들고자 할 때 secondary index로 만든다. 표기는 = 'table\_nameindex\_name' ex\) scarr~nam
+* Primary index: key field를 담는 index로 자동으로 생성 됨 = 'table\_name~0'으로 표기 ex\) scarr~0
+* Secondary index: primary index 이외에 추가적인 index를 만들고자 할 때 secondary index로 만든다. 표기는 = 'table\_name~index\_name' ex\) scarr~nam
 * Extension index: SAP system을 수정할 때 
-* se11에서 이미 만들어지 tab에서 secondaryindex와 extansionindex만들기 가능
+* se11에서 이미 만들어지 tab에서 secondary index와 extansion index만들기 가능
 
 **&lt;Optimizer&gt;**
 
