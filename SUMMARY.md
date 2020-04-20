@@ -9,6 +9,7 @@
   * [목표](web-1/undefined.md)
 * [정보처리산업기사](untitled/README.md)
   * [1.DataBase의 개념](untitled/1.database.md)
+  * [2.관계 데이터베이스 모델과 언어](untitled/2..md)
 * [ABAP](abap/README.md)
   * [ABAP Dictionary](abap/abap-dictionary/README.md)
     * [Input Checks](abap/abap-dictionary/untitled.md)
