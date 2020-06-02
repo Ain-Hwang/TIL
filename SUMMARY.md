@@ -9,7 +9,7 @@
   * [목표](web-1/undefined.md)
 * [혁신성장 청년인재 4기](4/README.md)
   * [6월](4/6/README.md)
-    * [Untitled](4/6/untitled.md)
+    * [0602](4/6/untitled.md)
   * [5월](4/5/README.md)
     * [Module](4/5/module/README.md)
       * [0529](4/5/module/0529.md)
