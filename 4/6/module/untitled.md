@@ -183,7 +183,7 @@ DOC\_DATA = 증빙
 
 ![](../../../.gitbook/assets/image%20%288%29.png)
 
-구매오더를 갖고 입고 하는 
+구매오더를 갖고 입고 하는  맨 위 인풋 입고/ 구매오더/101
 
 ![&#xAD6C;&#xB9E4;&#xC624;&#xB354; &#xBC88;&#xD638;&#xC5EC;&#xAE30;&#xC11C; &#xCC3E;&#xAE30;](../../../.gitbook/assets/image%20%2811%29.png)
 
@@ -212,6 +212,8 @@ DOC\_DATA = 증빙
 * Stack이라고 함 재고는 / 이 상태 간의 이동도 재고 이동이라고 침 
 
 ![](../../../.gitbook/assets/image%20%2812%29.png)
+
+전기일도 2019.11.~일로 바꿈
 
 ![4500004125&#xB85C; &#xB9CC;&#xB4E6; &#xC785;&#xACE0; &#xC0DD;&#xC131; &#xC644;&#xB8CC;](../../../.gitbook/assets/16.png)
 
