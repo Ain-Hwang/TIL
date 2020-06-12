@@ -10,6 +10,7 @@
 * [혁신성장 청년인재 4기](4/README.md)
   * [6월](4/6/README.md)
     * [Module](4/6/module/README.md)
+      * [0612](4/6/module/0612.md)
       * [0611](4/6/module/0611.md)
       * [0605](4/6/module/0605.md)
       * [0604](4/6/module/0604.md)
