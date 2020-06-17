@@ -19,13 +19,13 @@
 * Type Groups
   * Abap Dic에서 type들을 grounp 지어 놓은 것도 있음 =&gt; 대표적인 type grounp : ICON
 
-개발 시 ABAP Tool에서 Runtime 시 ABAP / Screen Interpreter에서 또 Database InterFace에서도 ABAP DIC 참조 한다.
+개발 시 ABAP Tool에서 Runtime 시 ABAP / Screen Interpreter에서 또 DatabaseInterFace에서도 ABAP DIC 참조 한다.
 
 ## Type Objects
 
 ABAP Dictionary의  type은 모든 프로그램에서 data type으로 선언해 사용 가능
 
-### Data Type \(standard, local, global\)
+### Data Type
 
 #### 1.Data Elements 
 
