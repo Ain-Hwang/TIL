@@ -8,19 +8,17 @@ database에서 원하는 data를 추출하고 해당 data를 정보로 활용할
 
 ### 프로그램 속성
 
-1 Type
-
-* Executive program \(1\) 
+* Executive program \(1 TYPE\) 
   *  t-code없이 se38에서 직접 실행가능
   * SELECTION SCREEN과 Output List로 구성
   * Logical DB 사용가능
-* Module pool program \(M\)
+* Module pool program \(M TYPE\)
   * Screen Painter 
   * Screen module processing
   * t-code나  menu function에 의해서만 실행
-* Include \(I\)
+* Include \(I TYPE\)
   * 다음 프로그램에서 include로 호출되는 내장형 프로그램
-* Subroutine\(S\)
+* Subroutine\(S TYPE\)
   * External PERFORM 구문에서 호출해서 사용 가능한 FORM문을 구성
 * 기타유형 
   * F~K는 program attribute에서 변경할 수 없으며 각각의 builder에서 관리함
