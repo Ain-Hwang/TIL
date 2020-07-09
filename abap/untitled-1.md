@@ -8,10 +8,10 @@
 
 DB TABLE: ZBOARD\_30 생성
 
-1. Module pool program 만들기
+1. 게시글 올리는 Module pool program 만들기
+
    1. 프로그램명 sapmzboard\_30 생성
-   2. layout: 익명 체크 박스, 작성자 필드, 날짜 필드, 조회버튼
-   3. 위에 세가지를 입력해서 정보가 일치하면 내용\(content\)이 보이도록 하고 아니라면 에러메세지로 다시 입력하게끔 하기
+   2. sapmzboard\_30의 field: 익명 체크 박스\(ch\), 작성자이름\(name\), 날짜\(date\), 글 작성 칸\(cont\) 
 
 
 
