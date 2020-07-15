@@ -38,7 +38,7 @@
 
 ![](../.gitbook/assets/image%20%28141%29.png)
 
-refresh도 해줄 수 있음 
+refresh도 해줄 수 있음 이런 class의 method는  se24에서 method 마다의 type과 파라미터 값을 확인할 수 있다. 
 
 alv에 담길 데이타들은 &gt;&gt;&gt;
 
@@ -46,6 +46,8 @@ alv에 담길 데이타들은 &gt;&gt;&gt;
 2. at selection screen &gt; 화면제어 멀티셀렉션을 단일 필드로 받게 할 수도 있고, 제대로 값이 들어왔는지 확인 할 수 있음
 3. start of selection &gt; 입력 받은 데이터를 받아서 select 문을 사용해 internal테이블값을 받아옴
 4. end of selection &gt; call screen nnn.  를 해줌 
+
+ALV는 각종 설정을 줄 수 있음\(save, variant 같\)
 
 
 
