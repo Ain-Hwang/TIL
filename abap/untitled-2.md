@@ -36,7 +36,9 @@
 
 원래는 이렇게 설정하는게 많음 
 
+![](../.gitbook/assets/image%20%28141%29.png)
 
+refresh도 해줄 수 있음 
 
 
 
