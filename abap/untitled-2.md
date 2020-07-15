@@ -30,7 +30,7 @@
 
 ![](../.gitbook/assets/image%20%28140%29.png)
 
- ALV Grid를 화면에 처음에 어떻게 보여줄지 설정하는 것  create object랑 같은 모듈에 선언해주면됨.
+ **ALV Grid를 화면에 처음에 어떻게 보여줄지 설정하는 것**  create object랑 같은 모듈에 선언해주면됨.
 
 ![](../.gitbook/assets/image%20%28138%29.png)
 
