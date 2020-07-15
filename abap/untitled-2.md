@@ -18,7 +18,7 @@
 
 1. Screen 생성
 2. Area 생성 \(스크린의 Layout에서 정\)
-3. Container Control 지정\( TOP Include에 변수를 cl\_gui\_custom\_container = ref type으로 선언, call screen을 해줌 / 해당하는 screen의 PBO에 패턴을 이용 Create Object를 한다. / ALV Grid Control도 같은 방법으로 선언하고 Create Object한다. \(ref type은 cl\_gui\_alv\_grid\)
+3. Container Control 지정\( TOP Include에 변수를 cl\_gui\_custom\_container = ref type으로 선언, call screen을 해줌 / 해당하는 screen의 PBO에 패턴을 이용 Create Object를 한다. / ALV Grid Control도 같은 방법으로 선언하고 Create Object한다. \(ref type은 cl\_gui\_alv\_grid &gt; 이거는 se24에서 확인 할 수 있\)
 
 ![](../.gitbook/assets/image%20%28137%29.png)
 
@@ -35,6 +35,8 @@
 ![](../.gitbook/assets/image%20%28138%29.png)
 
 원래는 이렇게 설정하는게 많음 
+
+
 
 
 

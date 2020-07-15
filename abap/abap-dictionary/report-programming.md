@@ -66,6 +66,7 @@ AT SELECTION-SCREEN. "(OUTPUT, ON VALUE REQUEST.)
 START-OF-SELECTION.
 "(SELECT * FROM ~~ 또는 GET<TABLE>~~.)
 END-OF-SELECTION.
+call screen 같은 것 써주면 
 ```
 
 3 List process event
