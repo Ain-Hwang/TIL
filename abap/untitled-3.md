@@ -6,5 +6,8 @@
 
 ![top include](../.gitbook/assets/image%20%28143%29.png)
 
+* main program은 report program으로 로직을 써주는 것이고 
+* top include는 include 전역에서 선언해서 사용할 수 있는 변수들을 선언함.
+
 
 
