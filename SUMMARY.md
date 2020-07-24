@@ -15,6 +15,8 @@
     * [Untitled](4/undefined/untitled.md)
     * [0620](4/undefined/0620.md)
   * [7월](4/7/README.md)
+    * [0724](4/7/0724.md)
+    * [0722](4/7/0722.md)
     * [Untitled](4/7/untitled/README.md)
       * [0702](4/7/untitled/0702.md)
     * [0701](4/7/0701.md)
