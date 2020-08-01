@@ -66,6 +66,7 @@
   * [4.자료 구조의 기본](untitled/4..md)
 * [OS](os.md)
 * [ABAP](abap/README.md)
+  * [tips](abap/tips.md)
   * [Q.](abap/untitled-3.md)
   * [Open SQL](abap/open-sql.md)
   * [ALV](abap/untitled-2.md)
