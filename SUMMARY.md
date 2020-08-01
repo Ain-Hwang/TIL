@@ -8,8 +8,6 @@
   * [실습환경 구성하기](web-1/1..md)
   * [목표](web-1/undefined.md)
 * [혁신성장 청년인재 4기](4/README.md)
-  * [Untitled](4/untitled-1.md)
-  * [Untitled](4/untitled.md)
   * [멘토링](4/undefined/README.md)
     * [0721](4/undefined/0721.md)
     * [0718](4/undefined/0718.md)
