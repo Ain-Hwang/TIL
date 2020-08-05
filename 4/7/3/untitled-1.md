@@ -88,7 +88,13 @@ tcode에 해당하는 bapi가 있는지 보고 없으면 사용 못함 .
 
       면 3번만 modify 
 
-* endloop.
+* endloop
+
+
+
+&lt;관련된 tcode에 bapi를 검색하고싶을 때 &gt;
+
+* 구글에 bapi me21n 같이 검색하면 or \(functionmodulle\)fm me21n이런 식으로 검색하면 'BAPI\_PO\_CHANGE' 이런 식의 function이 뜸.
 
 
 
