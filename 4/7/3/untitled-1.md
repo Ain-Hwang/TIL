@@ -18,11 +18,11 @@
   * bapi = function을 호출하는 것 &gt; 
   * 
 
-![](../../../.gitbook/assets/image%20%28222%29.png)
+![](../../../.gitbook/assets/image%20%28225%29.png)
 
 이 탭들이 function의 파라미터들이다 각각의 탭에 어떤 값이 들어가는지 잘 알아야 function을 호출해서 사용할 수 있음 /  디폴트값이 있거나 사용자가 꼭 넣지 않아도 되는 값은 빼고 만들어 줄 수 있음 . 
 
-![](../../../.gitbook/assets/image%20%28223%29.png)
+![](../../../.gitbook/assets/image%20%28226%29.png)
 
 * function 생성시 remote-module 을 체크하면 외부\(자바나 웹이나\)에서 사용할 수 있음 &gt;&gt;&gt;&gt; 파라미터만 적철히 넣으면 자바에서도 구매오더 생성가능  RFC but 거의 99퍼 내부적으로 사용한다
 
@@ -31,11 +31,11 @@
 * function에서 파라미터에 optional이 체크 돼 있으면 꼭 안넣어도 됨 long text 버튼이 있으면 파라미터에 대한 설명이 있음  
 *  bapi는 반드시 commit을 콜해줘야함. \* &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;중요
 * * 
-![](../../../.gitbook/assets/image%20%28219%29.png)
+![](../../../.gitbook/assets/image%20%28220%29.png)
 
 tables에 있는 건 모두 테이블 형태 
 
-![](../../../.gitbook/assets/image%20%28220%29.png)
+![](../../../.gitbook/assets/image%20%28221%29.png)
 
 bapiretun은  실패시 e type을 반환하고 message를 띄움 
 
@@ -57,9 +57,21 @@ tcode에 해당하는 bapi가 있는지 보고 없으면 사용 못함 .
 
 ![](../../../.gitbook/assets/image%20%28216%29.png)
 
-이 해더 정보들을 바꿀거임.
+이 해더 정보들을 바꿀거임. &gt; 저 두개 f1 눌러서 파라미터 이름을 확인해볼 것 그걸 갖고 프로그램에서 바꾼다고 지정해주는 것 
 
-![](../../../.gitbook/assets/image%20%28221%29.png)
+![](../../../.gitbook/assets/image%20%28223%29.png)
 
-![](../../../.gitbook/assets/image%20%28225%29.png)
+![](../../../.gitbook/assets/image%20%28229%29.png)
+
+
+
+![](../../../.gitbook/assets/image%20%28217%29.png)
+
+![](../../../.gitbook/assets/image%20%28227%29.png)
+
+![](../../../.gitbook/assets/image%20%28224%29.png)
+
+![](../../../.gitbook/assets/image%20%28222%29.png)
+
+
 
