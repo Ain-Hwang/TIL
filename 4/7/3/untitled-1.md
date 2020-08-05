@@ -79,9 +79,16 @@ tcode에 해당하는 bapi가 있는지 보고 없으면 사용 못함 .
 
 + 추가적인 내용들 changed 구문 추가하기. /
 
-* loop at ??
-  * at new.
-  * endat.
+* loop at lt\_changed into ls\_changed. 안에서
+
+  * at new.   endat. 맨 첫번째로 뤂 돌 때
+  * at last.    endat. 마지막 뤂 돌 때 
+  * at new row\_id.  endat. id가 달라질 때마다 &gt;한 라인의 시작 changed-&gt;modify cell
+  * at end of row\_id.  endat "로우아이디가  &gt; 한 라인의 끝마다  changed-&gt;modify cell을 해주면 좋다. &gt;&gt; 그러면 한라인이 시작 or 끝 날때 modify를 하는 것  &gt;&gt;&gt; field를 두개 수정해서 3라인을 바꾸면 6개을 modify 해야하는 데 at new row\_id 나 at end of row\_id를 하
+
+      면 3번만 modify 
+
+* endloop.
 
 
 
