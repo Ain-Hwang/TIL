@@ -11,15 +11,15 @@
 
 ![](../../../.gitbook/assets/image%20%28232%29.png)
 
-![](../../../.gitbook/assets/image%20%28264%29.png)
+![](../../../.gitbook/assets/image%20%28268%29.png)
 
 이제 레코딩을 뜰거임 TCODE = SHDB
 
-![](../../../.gitbook/assets/image%20%28258%29.png)
+![](../../../.gitbook/assets/image%20%28261%29.png)
 
 NEW를 눌러서 RECODING을 생성해줌 MM01\_30\_1으로 그리고 TCODE에 MM01\(자재생성\) 입력 START 버튼을 누름 시간이 아니라 뭘클리하고 입력했는지는 지를 받음 그러면 MM01로 이동함그래서 자재를 생성하면
 
-![](../../../.gitbook/assets/image%20%28249%29.png)
+![](../../../.gitbook/assets/image%20%28251%29.png)
 
 이런 레코딩화면을 볼 수 있음 커서를 지우고 싶어서 커서에 커서를 놓고 빼기를 누르면 빠짐
 
@@ -31,7 +31,7 @@ NEW를 눌러서 RECODING을 생성해줌 MM01\_30\_1으로 그리고 TCODE에 M
 
 해당하는 작업이 있던 곳으로 이동함 
 
-![](../../../.gitbook/assets/image%20%28250%29.png)
+![](../../../.gitbook/assets/image%20%28252%29.png)
 
 /커서와  SUBSCR을 삭제하고 필요한 것만 남긴 뒤 저장
 
@@ -39,7 +39,7 @@ NEW를 눌러서 RECODING을 생성해줌 MM01\_30\_1으로 그리고 TCODE에 M
 
 다시 SHDB 로 가서 내껄 검색하면 레코딩이 있는걸 볼 수 있음 들어가서
 
-![](../../../.gitbook/assets/image%20%28263%29.png)
+![](../../../.gitbook/assets/image%20%28267%29.png)
 
 자재 코드를 바꿔서 똑같이 생성할 수 있음 수정 버튼&gt; 자재 코드 바꾸고 &gt; PROCESS버
 
@@ -47,7 +47,7 @@ NEW를 눌러서 RECODING을 생성해줌 MM01\_30\_1으로 그리고 TCODE에 M
 
 레코드 순서대로 똑같이 흘러가는 것을 볼 수 있
 
-![](../../../.gitbook/assets/image%20%28261%29.png)
+![](../../../.gitbook/assets/image%20%28264%29.png)
 
 새 프로그램을 하나 생성해주고 BAPI 샘플에서 MAIN만 긁어옴 그리고 CALL TRANSATION을 용할 거임 키워드에 커서를 두로 F1을 누르면 구문에 대한 설명을 볼 수 있
 
@@ -64,27 +64,27 @@ CALL TRANSACTION 'MM01' USING GT_BDC "MM01이라는 티코드를 GT_BDC를 갖�
 
 
 
-![](../../../.gitbook/assets/image%20%28251%29.png)
+![](../../../.gitbook/assets/image%20%28253%29.png)
 
 ![](../../../.gitbook/assets/image%20%28240%29.png)
 
 ![](../../../.gitbook/assets/image%20%28238%29.png)
 
-![](../../../.gitbook/assets/image%20%28262%29.png)
+![](../../../.gitbook/assets/image%20%28265%29.png)
 
 레코드의 정보를 다 코드로 작성
 
 이렇게 레코드 정보대로 다 입력하고 프로그램 실행하면 
 
-![](../../../.gitbook/assets/image%20%28245%29.png)
+![](../../../.gitbook/assets/image%20%28246%29.png)
 
 새로운 자재이름과 내역을 입력하고 
 
-![](../../../.gitbook/assets/image%20%28252%29.png)
+![](../../../.gitbook/assets/image%20%28254%29.png)
 
 레코드를 돈다 이렇게 과정을 하나하나 보여주는게 A모드고 N모드는 백그라운드로 진행화면 없이 실행한다 E모드는 N과 같이 진행하지만 에러가 나면 보여줌
 
-![](../../../.gitbook/assets/image%20%28253%29.png)
+![](../../../.gitbook/assets/image%20%28255%29.png)
 
 여기서 새로운 자재생성이 완료됨.
 
@@ -92,15 +92,15 @@ CALL TRANSACTION 'MM01' USING GT_BDC "MM01이라는 티코드를 GT_BDC를 갖�
 
 이렇게 CALL TRANSACTION을 줄 때 
 
-![](../../../.gitbook/assets/image%20%28259%29.png)
+![](../../../.gitbook/assets/image%20%28262%29.png)
 
 F1으로 해당하는 구문에 필요한 ITAB이나 MODE OPTION에 대한 TYPE들을 확인하고 TOP에서 미리 선언해 둬야함 
 
-![](../../../.gitbook/assets/image%20%28254%29.png)
+![](../../../.gitbook/assets/image%20%28256%29.png)
 
 이렇게 
 
-![](../../../.gitbook/assets/image%20%28257%29.png)
+![](../../../.gitbook/assets/image%20%28260%29.png)
 
 그리고 호출할 때 선언한 타입으로 써줌 그러면!!! 선언한 TYPE을 보기 위해서 직접 보자 
 
@@ -210,15 +210,15 @@ SHDB 에서 RECODE를 확인하면 이런 필드의 테이블 형태로 돼 있�
 
 추가하고 싶은 작업에 사용되는 필드를 코드에 추가하면됨 꼭 레코드랑 같지 않아도 레코드를 틀로 참고하고 하나씩 추가해도 무관함.
 
-![](../../../.gitbook/assets/image%20%28248%29.png)
+![](../../../.gitbook/assets/image%20%28250%29.png)
 
 여기에 들어갈 수 있는 값중에 넣고 싶은 값을 선택해서 
 
-![](../../../.gitbook/assets/image%20%28244%29.png)
+![](../../../.gitbook/assets/image%20%28245%29.png)
 
 이렇게 추가하면 이거까지 포함된 과정으로 자재를 생성함. &gt;이렇게 일일이 노가다임 
 
-![](../../../.gitbook/assets/image%20%28260%29.png)
+![](../../../.gitbook/assets/image%20%28263%29.png)
 
 구문을 이렇게 추릴 수도 있음
 
@@ -226,7 +226,25 @@ SHDB 에서 RECODE를 확인하면 이런 필드의 테이블 형태로 돼 있�
 
 퍼폼에 파라미터를 다 주고 
 
-![](../../../.gitbook/assets/image%20%28247%29.png)
+![](../../../.gitbook/assets/image%20%28249%29.png)
 
 똑같이 생성됨
+
+
+
+![](../../../.gitbook/assets/image%20%28266%29.png)
+
+![](../../../.gitbook/assets/image%20%28247%29.png)
+
+![](../../../.gitbook/assets/image%20%28259%29.png)
+
+이렇게 띄워도 되지만. &gt;&gt;&gt; BAPI는 타입이 E로 딱 있는데 BDC는 MSGNR \(메세지 번호\)가 따로 있어서 그걸로 성공실패를 따져보는게 좋음 
+
+![](../../../.gitbook/assets/image%20%28244%29.png)
+
+이런식으로 
+
+
+
+
 
