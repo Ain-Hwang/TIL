@@ -246,7 +246,31 @@ SHDB 에서 RECODE를 확인하면 이런 필드의 테이블 형태로 돼 있�
 
 **&lt;bapi 구매오더변경, bdc로 자재생성 해봤다&gt;** 
 
-&lt;excel 업로드 엑셀에서 erp로&gt;
+&lt;excel 업로드 엑셀에서 erp로&gt; 프로그램 07번 생성 &gt; 
+
+![](../../../.gitbook/assets/image%20%28272%29.png)
+
+이 파일을 업로드할 것
+
+![](../../../.gitbook/assets/image%20%28271%29.png)
+
+여기서 불러올  FUNCTION에 대한 파라미터의 TYPE을 알 수 있
+
+![](../../../.gitbook/assets/image%20%28270%29.png)
+
+![](../../../.gitbook/assets/image%20%28273%29.png)
+
+그대로 선언하면 에러는 안나지만 디버깅을 걸어서 확인해보자
+
+![](../../../.gitbook/assets/image%20%28269%29.png)
+
+여기까지 하고 파서블엔트리를 클릭하면 이런 파일 선택이 가능한 화면이 나옴 
+
+이제 받은 경로로 데이타를 internal tab으로 불러 오는 것 function을 호출할 예정인데 alsm\_excel\_to\_internal\_table이라는 function을 호출할 것
+
+
+
+
 
 
 
