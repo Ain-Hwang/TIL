@@ -268,7 +268,7 @@ SHDB 에서 RECODE를 확인하면 이런 필드의 테이블 형태로 돼 있�
 
 이제 받은 경로로 데이타를 internal tab으로 불러 오는 것 function을 호출할 예정인데 alsm\_excel\_to\_internal\_table이라는 function을 호출할 것
 
-
+올리면서 체크 돌리기 전에 체크 bdc 돌 때 도는 체크는 어쩔 수 없음 
 
 
 
