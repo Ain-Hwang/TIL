@@ -11,15 +11,15 @@
 
 ![](../../../.gitbook/assets/image%20%28231%29.png)
 
-![](../../../.gitbook/assets/image%20%28244%29.png)
+![](../../../.gitbook/assets/image%20%28250%29.png)
 
 이제 레코딩을 뜰거임 TCODE = SHDB
 
-![](../../../.gitbook/assets/image%20%28241%29.png)
+![](../../../.gitbook/assets/image%20%28246%29.png)
 
 NEW를 눌러서 RECODING을 생성해줌 MM01\_30\_1으로 그리고 TCODE에 MM01\(자재생성\) 입력 START 버튼을 누름 시간이 아니라 뭘클리하고 입력했는지는 지를 받음 그러면 MM01로 이동함그래서 자재를 생성하면
 
-![](../../../.gitbook/assets/image%20%28238%29.png)
+![](../../../.gitbook/assets/image%20%28241%29.png)
 
 이런 레코딩화면을 볼 수 있음 커서를 지우고 싶어서 커서에 커서를 놓고 빼기를 누르면 빠짐
 
@@ -31,15 +31,15 @@ NEW를 눌러서 RECODING을 생성해줌 MM01\_30\_1으로 그리고 TCODE에 M
 
 해당하는 작업이 있던 곳으로 이동함 
 
-![](../../../.gitbook/assets/image%20%28239%29.png)
+![](../../../.gitbook/assets/image%20%28242%29.png)
 
 /커서와  SUBSCR을 삭제하고 필요한 것만 남긴 뒤 저장
 
-![](../../../.gitbook/assets/image%20%28235%29.png)
+![](../../../.gitbook/assets/image%20%28236%29.png)
 
 다시 SHDB 로 가서 내껄 검색하면 레코딩이 있는걸 볼 수 있음 들어가서
 
-![](../../../.gitbook/assets/image%20%28243%29.png)
+![](../../../.gitbook/assets/image%20%28249%29.png)
 
 자재 코드를 바꿔서 똑같이 생성할 수 있음 수정 버튼&gt; 자재 코드 바꾸고 &gt; PROCESS버
 
@@ -47,7 +47,7 @@ NEW를 눌러서 RECODING을 생성해줌 MM01\_30\_1으로 그리고 TCODE에 M
 
 레코드 순서대로 똑같이 흘러가는 것을 볼 수 있
 
-![](../../../.gitbook/assets/image%20%28242%29.png)
+![](../../../.gitbook/assets/image%20%28247%29.png)
 
 새 프로그램을 하나 생성해주고 BAPI 샘플에서 MAIN만 긁어옴 그리고 CALL TRANSATION을 용할 거임 키워드에 커서를 두로 F1을 누르면 구문에 대한 설명을 볼 수 있
 
@@ -61,4 +61,26 @@ CALL TRANSACTION 'MM01' USING GT_BDC "MM01이라는 티코드를 GT_BDC를 갖�
 ![](../../../.gitbook/assets/image%20%28230%29.png)
 
 
+
+
+
+![](../../../.gitbook/assets/image%20%28243%29.png)
+
+![](../../../.gitbook/assets/image%20%28237%29.png)
+
+![](../../../.gitbook/assets/image%20%28235%29.png)
+
+![](../../../.gitbook/assets/image%20%28248%29.png)
+
+레코드의 정보를 다 코드로 작성
+
+이렇게 레코드 정보대로 다 입력하고 프로그램 실행하면 
+
+![](../../../.gitbook/assets/image%20%28239%29.png)
+
+새로운 자재이름과 내역을 입력하고 
+
+![](../../../.gitbook/assets/image%20%28244%29.png)
+
+레코드를 돈다 이렇게 과정을 하나하나 보여주는게 A모드고 N모드는 백그라운드로 진행화면 없이 실행한다 E모드는 N과 같이 진행하지만 에러가 나면 보여줌
 
