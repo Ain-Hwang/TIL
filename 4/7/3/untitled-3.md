@@ -61,11 +61,13 @@ DOCKING을 이용해 CONTAINER를 만들고 그걸 SPLITTER로 나룸 나눠진 
 
 CTS = SE09 &gt; 중요한 티코드 
 
-![](../../../.gitbook/assets/image%20%28284%29.png)
+![](../../../.gitbook/assets/image%20%28285%29.png)
 
-CUSTOMIZIONG &gt;  컨설
+WORKBENCH &gt; 개발자 / CUSTOMIZIONG &gt;  컨설
 
-WORKBENCH &gt; 개발자 
+ MODIFIABLE &gt; 수정가능한 모드냐 / RELEASED &gt; 완료된 모드냐 
+
+
 
 가 주로 사용 \(현업  = 내가 만든 프로그램을 쓰는 사람 / 만드는 사람 SYSTEM을 구성하는 사람은 \(개발, SM\) 현업이라 하지 않음\)
 
