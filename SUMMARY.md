@@ -17,7 +17,7 @@
     * [0620](4/undefined/0620.md)
   * [7월](4/7/README.md)
     * [3주 미니프로젝트](4/7/3/README.md)
-      * [Untitled](4/7/3/untitled-3.md)
+      * [0807](4/7/3/untitled-3.md)
       * [0806](4/7/3/untitled-2.md)
       * [0805](4/7/3/untitled-1.md)
       * [0804](4/7/3/0804.md)
