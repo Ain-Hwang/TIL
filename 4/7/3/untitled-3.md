@@ -75,13 +75,17 @@ CTS라 함은 현재 개발에서 운영으로
 
 
 
-배치스케줄
+#### batch job 
 
-SE36에서 등록하고 
+ SE36에서 등록하고 
 
 SM37 &gt;  백그라운드로 돌아가는 프로그램 즉 눈으로 확인하지 않고 서버에서 그냥 돌리는 프로그램,  정기적인것도 있고 아닌 것도 있음 &gt; 유지보수하는 사람들이 자주 사용 
 
-인터페이스 = SAP에서는 RFC, MESSAGE SERVER 같은 것을 말한다 \(SYSTEM같에 데이터를 주고 받는 것\) FUNCTION그룹에서 REMOTE-FUNCTION  MODULE을 찍어두면 RFC 가 가능  &gt; FUNCTION을 파라미터가 대표적인 인터페이스 
+인터페이스 = SAP에서는 RFC, MESSAGE SERVER 같은 것을 말한다 \(SYSTEM같에 데이터를 주고 받는 것\) FUNCTION그룹에서 REMOTE-FUNCTION  MODULE을 찍어두면 RFC 가 가능  &gt; FUNCTION을 파라미터가 대표적인 인터페이스  / 인터페이스 중간에 PAI\(pi\)와 EAI같은게 많이 등자 &gt; 이것도 RFC처럼 타시스템과 연결해주는 것 웹서비스 방식일 경우는 RFC와 다름 ;
+
+#### DBI
+
+SAP DB에는 아무거나 종류가 다양하게 올 수 있음  dbi가 있기 때문에 / 아예 다른 곳에 있는 db sap11에 있는 게 아닌 다른 곳에 있는 db도 다이렉트 접근이 가능 문법은 open sql말고 해야하긴 함. / 다른 곳에서 sap  db도 접근하려고 하면 절대 안됨.  
 
 
 
@@ -90,4 +94,6 @@ SM37 &gt;  백그라운드로 돌아가는 프로그램 즉 눈으로 확인하�
 
 
 
+
+67아
 
