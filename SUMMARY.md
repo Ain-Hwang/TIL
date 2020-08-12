@@ -9,6 +9,7 @@
   * [목표](web-1/undefined.md)
 * [혁신성장 청년인재 4기](4/README.md)
   * [8월](4/8/README.md)
+    * [0812](4/8/0812.md)
     * [0811](4/8/0811.md)
   * [멘토링](4/undefined/README.md)
     * [과제](4/undefined/undefined.md)
