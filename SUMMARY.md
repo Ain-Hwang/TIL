@@ -43,7 +43,6 @@
       * [0702](4/7/untitled/0702.md)
     * [0701](4/7/0701.md)
   * [6월](4/6/README.md)
-    * [Untitled](4/6/untitled.md)
     * [ABAP](4/6/abap/README.md)
       * [0630](4/6/abap/0630.md)
       * [0623](4/6/abap/0623.md)
