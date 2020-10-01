@@ -29,7 +29,7 @@
 
 * function에서 파라미터에 optional이 체크 돼 있으면 꼭 안넣어도 됨 long text 버튼이 있으면 파라미터에 대한 설명이 있음  
 *  bapi는 반드시 commit을 콜해줘야함. \* &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;중요
-* * 
+
 ![](../../../.gitbook/assets/image%20%28220%29.png)
 
 tables에 있는 건 모두 테이블 형태 
