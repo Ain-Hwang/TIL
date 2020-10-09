@@ -144,5 +144,12 @@ for i in range(n):
     print(a+b)
 ```
 
+5. N찍기
 
+```text
+n = int(input())3
+
+for i in range(1, n+1):
+    print(i)
+```
 
