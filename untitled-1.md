@@ -162,3 +162,20 @@ for i in range(n):
     print(n-i)
 ```
 
+7. A + B - 7
+
+```text
+cases = int(input())
+
+for i in range(cases):
+    a, b = map(int, input().split())
+    # hab = a+b
+    print('Case #%s: %s' % (i+1, a+b))
+```
+
+8.  A + B - 8 
+
+```text
+
+```
+
