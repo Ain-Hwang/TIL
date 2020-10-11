@@ -176,6 +176,29 @@ for i in range(cases):
 8.  A + B - 8 
 
 ```text
+cases = int(input())
 
+for i in range(cases):
+    a, b = map(int, input().split())
+    # hab = a+b
+    print('Case #%s: %s + %s = %s' % (i+1, a, b, a+b))
+```
+
+9. 별 찍기 1
+
+```text
+a = int(input())
+
+for i in range(1, a+1):
+    print('*'*i)
+```
+
+10. 별찍기 2
+
+```text
+a = int(input())
+
+for i in range(1, a+1):
+    print(' '*(a-i)+'*'*i)
 ```
 
