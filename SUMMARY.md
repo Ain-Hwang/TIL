@@ -2,6 +2,7 @@
 
 * [기록](README.md)
 * [TIL](til/README.md)
+  * [Untitled](til/untitled.md)
   * [20200103](til/20200103.md)
   * [20200104](til/20200104.md)
 * [혁신성장 청년인재 4기](4/README.md)
@@ -85,6 +86,7 @@
   * [WEB](os/web-1/README.md)
     * [실습환경 구성하기](os/web-1/1..md)
     * [목표](os/web-1/undefined.md)
+* [Untitled](untitled-2.md)
 * [ABAP](abap/README.md)
   * [tips](abap/tips.md)
   * [Q.](abap/untitled-3.md)
