@@ -81,7 +81,6 @@
   * [Q.](abap/untitled-3.md)
   * [Open SQL](abap/open-sql.md)
   * [ALV](abap/untitled-2.md)
-  * [프로그래밍](abap/untitled-1.md)
   * [ABAP Basic](abap/untitled.md)
   * [ABAP Dictionary](abap/abap-dictionary/README.md)
     * [Input Checks](abap/abap-dictionary/untitled.md)
@@ -92,5 +91,4 @@
   * [ABAP Object](abap/alv/README.md)
     * [Untitled](abap/alv/untitled.md)
     * [Class](abap/alv/class.md)
-  * [목표](abap/undefined.md)
 
