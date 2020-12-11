@@ -1,5 +1,5 @@
 ---
-description: Java를 이용한 알고리즘 훈련
+description: Python을 이용한 알고리즘 훈련
 ---
 
 # Algorithm
@@ -200,11 +200,5 @@ a = int(input())
 
 for i in range(1, a+1):
     print(' '*(a-i)+'*'*i)
-```
-
-11. 
-
-```text
-
 ```
 
