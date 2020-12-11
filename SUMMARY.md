@@ -61,7 +61,6 @@
       * [0602](4/6/module/untitled.md)
   * [5월](4/5/README.md)
     * [Module](4/5/module/README.md)
-      * [Untitled](4/5/module/untitled.md)
       * [0529](4/5/module/0529.md)
       * [0528](4/5/module/0528.md)
       * [0527](4/5/module/0527.md)
