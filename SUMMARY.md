@@ -1,7 +1,7 @@
 # Table of contents
 
 * [기록](README.md)
-* [혁신성장 청년인재 4기](4/README.md)
+* [SAP](4/README.md)
   * [정리된 내용](4/undefined-3.md)
   * [멘토링](4/undefined/README.md)
     * [과제](4/undefined/undefined.md)
@@ -77,7 +77,7 @@
   * [3.관계 데이터베이스 모델과 언어](untitled/2..md)
   * [4.자료 구조의 기본](untitled/4..md)
 * [ABAP](abap/README.md)
-  * [tips](abap/tips.md)
+  * [Tips](abap/tips.md)
   * [Q.](abap/untitled-3.md)
   * [Open SQL](abap/open-sql.md)
   * [ALV](abap/untitled-2.md)
