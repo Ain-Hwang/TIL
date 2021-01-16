@@ -76,6 +76,8 @@
   * [1.DataBase의 개념](untitled/1.database.md)
   * [3.관계 데이터베이스 모델과 언어](untitled/2..md)
   * [4.자료 구조의 기본](untitled/4..md)
+* [컴퓨터활용능력](undefined/README.md)
+  * [\(1급\)필기](undefined/1.md)
 * [ABAP](abap/README.md)
   * [Tips](abap/tips.md)
   * [Q.](abap/untitled-3.md)
