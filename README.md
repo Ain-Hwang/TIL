@@ -1,5 +1,5 @@
 ---
-description: 'ABAP, Module, Algorithm... Today I Learn'
+description: 'JAVA, ABAP, Module, Algorithm... Today I Learn'
 ---
 
 # 기록
