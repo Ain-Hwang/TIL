@@ -90,8 +90,9 @@
   * [1.Java기초 문법](java/1.java.md)
 * [Algorithm](untitled-1.md)
 * [정보처리산업기사](untitled/README.md)
-  * [필기 합격 후기](untitled/undefined.md)
-  * [1.DataBase의 개념](untitled/1.database.md)
-  * [3.관계 데이터베이스 모델과 언어](untitled/2..md)
-  * [4.자료 구조의 기본](untitled/4..md)
+  * [실기 시험 공부 기록](untitled/undefined-1.md)
+  * [필기 시험 공부 기록 및 합격 후기](untitled/undefined/README.md)
+    * [1.DataBase의 개념](untitled/undefined/1.database.md)
+    * [3.관계 데이터베이스 모델과 언어](untitled/undefined/2..md)
+    * [4.자료 구조의 기본](untitled/undefined/4..md)
 
