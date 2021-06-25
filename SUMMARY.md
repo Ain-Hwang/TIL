@@ -76,7 +76,7 @@
   * [Q.](abap/untitled-3.md)
   * [Open SQL](abap/open-sql.md)
   * [ALV](abap/untitled-2.md)
-  * [ABAP Basic](abap/untitled.md)
+  * [ABAP Type, Objects](abap/untitled.md)
   * [ABAP Dictionary](abap/abap-dictionary/README.md)
     * [Input Checks](abap/abap-dictionary/untitled.md)
     * [Table Change](abap/abap-dictionary/database-tables.md)
