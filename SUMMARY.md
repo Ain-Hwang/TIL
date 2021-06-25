@@ -2,7 +2,7 @@
 
 * [기록](README.md)
 * [SAP](4/README.md)
-  * [정리된 내용](4/undefined-3.md)
+  * [예진공유필기](4/undefined-3.md)
   * [멘토링](4/undefined/README.md)
     * [과제](4/undefined/undefined.md)
     * [0822](4/undefined/0822.md)

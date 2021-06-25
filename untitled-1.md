@@ -1,5 +1,5 @@
 ---
-description: Python을 이용한 알고리즘 훈련
+description: Python로 알고리즘
 ---
 
 # Algorithm
