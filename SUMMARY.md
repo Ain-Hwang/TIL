@@ -72,6 +72,7 @@
       * [0512](4/5/cloud/0512.md)
       * [0522](4/5/cloud/0522.md)
 * [ABAP](abap/README.md)
+  * [Homework](abap/homework.md)
   * [Tips](abap/tips.md)
   * [Q.](abap/untitled-3.md)
   * [Open SQL](abap/open-sql.md)
