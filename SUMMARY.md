@@ -84,7 +84,6 @@
     * [Report programming](abap/abap-dictionary/report-programming.md)
     * [Screen programming](abap/abap-dictionary/screen-programming.md)
   * [ABAP Object](abap/alv/README.md)
-    * [Untitled](abap/alv/untitled.md)
     * [Class](abap/alv/class.md)
 * [JAVA](java/README.md)
   * [1.Java기초 문법](java/1.java.md)
